@@ -1,0 +1,29 @@
+{% include "@BenmachaTemplate/Template/head.html.twig" %}
+<link rel="stylesheet" href="{{ asset('bundles/benmachatemplate/css/separate/pages/login.min.css') }}">
+<link rel="stylesheet" href="{{ asset('bundles/benmachatemplate/css/separate/vendor/pnotify.min.css') }}">
+{% include "@BenmachaTemplate/Template/head-end.html.twig" %}
+    {% form_theme form '@BenmachaTemplate/layout/form/layout.html.twig' %}
+
+<body>
+<div class="page-center">
+    <div class="page-center-in">
+        <div class="container-fluid">
+
+            {{ form_start(form,  {'attr':{'class': 'sign-box'}}) }}
+            <div class="sign-avatar">
+                <img src="{{ asset('apple-touch-icon.png') }}" alt="">
+            </div>
+
+            <header class="sign-title">Registration</header>
+            {{ form_widget(form) }}
+            <button type="submit" class="btn btn-submit">Register</button>
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+</div>
+{% include "@BenmachaTemplate/Template/footer.html.twig" %}
+
+{% include "@BenmachaTemplate/Template/footer.html.twig" %}
+
+

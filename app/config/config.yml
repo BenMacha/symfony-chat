@@ -17,8 +17,10 @@ framework:
         strict_requirements: ~
     form: ~
     csrf_protection: ~
-    validation: { enable_annotations: true }
-    #serializer: { enable_annotations: true }
+    validation: { enabled: true, enable_annotations: true }
+    serializer: { enable_annotations: true }
+    templating:
+        engines: ['twig']
     default_locale: '%locale%'
     trusted_hosts: ~
     session:
@@ -69,3 +71,6 @@ swiftmailer:
 sensio_framework_extra:
    router:
         annotations: false
+
+benmacha_template:
+    site_name: 'Chat'
